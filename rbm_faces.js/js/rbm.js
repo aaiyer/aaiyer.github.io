@@ -151,7 +151,7 @@ RBM.prototype._load_array = function (filename, length)
 		processData: false,
 		responseType: "arraybuffer",
 		success: function (data) {
-			var view = new jDataView(data);
+			var view = new jDataView(data, undefined, undefined, true);
 			for(var i = 0; i < length; i++) {
 				res[i] = view.getFloat32();
 			}
