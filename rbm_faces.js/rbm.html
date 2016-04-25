@@ -5,11 +5,12 @@
                 <title>Learning the basics of canvas</title>
                 <meta charset="utf-8">
  
-                <script type="text/javascript" src="http://aaiyer.github.io/rbm_faces.js/js/jquery-1.3.2.min.js"></script>
-                <script type="text/javascript" src="http://aaiyer.github.io/rbm_faces.js/js/jdataview.js"></script>
-				<script src="http://aaiyer.github.io/rbm_faces.js/js/jquery.prettyLoader.js" type="text/javascript" charset="utf-8"></script>
-				<link rel="stylesheet" href="http://aaiyer.github.io/rbm_faces.js/css/prettyLoader.css" type="text/css" media="screen" charset="utf-8" />
-                <script type="text/javascript" src="http://aaiyer.github.io/rbm_faces.js/js/rbm.js"></script>
+                <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+                <script type="text/javascript" src="js/jquery.binarytransport.js"></script>
+                <script type="text/javascript" src="js/jdataview.js"></script>
+				<script src="js/jquery.prettyLoader.js" type="text/javascript" charset="utf-8"></script>
+				<link rel="stylesheet" href="css/prettyLoader.css" type="text/css" media="screen" charset="utf-8" />
+                <script type="text/javascript" src="js/rbm.js"></script>
 
                 <script type="text/javascript">
                         function rbm_start() {
@@ -22,17 +23,17 @@
                             
                             rbm0 = new RBM(1024,
                                            1024,
-                                           "http://aaiyer.github.io/rbm_faces.js/params/W0.bin",
-                                           "http://aaiyer.github.io/rbm_faces.js/params/b0.bin",
-                                           "http://aaiyer.github.io/rbm_faces.js/params/c0.bin",
+                                           "params/W0.bin",
+                                           "params/b0.bin",
+                                           "params/c0.bin",
                                            $("#visibles-canvas"),
                                            $("#0-hiddens-canvas"));
                             
 							rbm1 = new RBM(1024,
                                            512,
-                                           "http://aaiyer.github.io/rbm_faces.js/params/W1.bin",
-                                           "http://aaiyer.github.io/rbm_faces.js/params/b1.bin",
-                                           "http://aaiyer.github.io/rbm_faces.js/params/c1.bin",
+                                           "params/W1.bin",
+                                           "params/b1.bin",
+                                           "params/c1.bin",
                                            $("#0-hiddens-canvas"),
                                            $("#1-hiddens-canvas"));
 

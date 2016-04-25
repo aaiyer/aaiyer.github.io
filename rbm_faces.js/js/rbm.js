@@ -144,7 +144,13 @@ RBM.prototype._load_array = function (filename, length)
 	
 	params_loading += 1;
 	
-	$.get(filename, function (data) {
+	$.ajax({
+		url: filename,
+		type: "GET",
+		dataType: "binary",
+		processData: false,
+		responseType: "arraybuffer",
+		success: function (data) {
 			var view = new jDataView(data);
 			for(var i = 0; i < length; i++) {
 				res[i] = view.getFloat32();
@@ -155,9 +161,8 @@ RBM.prototype._load_array = function (filename, length)
 			if (params_loading == 0) {
 			    $.prettyLoader.hide();
 			}
-	  },
-	  'dataview'
-	);
+	  	}
+	});
 	
 	return res;
 }
