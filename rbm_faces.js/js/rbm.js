@@ -144,7 +144,8 @@ RBM.prototype._load_array = function (filename, length)
 	
 	params_loading += 1;
 	
-	$.get(filename, function (view) {
+	$.get(filename, function (data) {
+			var view = new jDataView(data);
 			for(var i = 0; i < length; i++) {
 				res[i] = view.getFloat32();
 			}
